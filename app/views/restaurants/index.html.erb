@@ -1,0 +1,16 @@
+<h1>list of all restaurants </h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 card">
+      <% @restaurants.each do |resto| %>
+              <h2><%= resto.name %></h2>
+              <h2><%= resto.category %></h2>
+              <h2><%= resto.phone_number %></h2>
+              <h2><%= resto.address %></h2>
+              <%= link_to "See details", restaurant_path(resto.id), class: "btn btn-primary"%>
+      <% end %>
+    </div>
+  </div>
+</div>
+
